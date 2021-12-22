@@ -1,0 +1,191 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins");
+@import url("https://fonts.googleapis.com/css?family=Consolas");
+
+html {
+	position: relative;
+	min-height: 100%;
+}
+
+body {
+	font-family: "Poppins", sans-serif;
+	background: rgb(43, 43, 43);
+}
+
+body::-webkit-scrollbar {
+	width: 16px;
+}
+
+body::-webkit-scrollbar-track {
+	background: rgb(43, 43, 43);
+} body.light_mode::-webkit-scrollbar-track {
+	background: rgb(212, 212, 212);
+}
+
+body::-webkit-scrollbar-thumb {
+	background: rgb(80, 80, 80);
+	border: 5px solid;
+	border-color: rgb(43, 43, 43);
+	border-radius: 16px;
+} body.light_mode::-webkit-scrollbar-thumb {
+	background: rgb(175, 175, 175);
+	border-color: rgb(212, 212, 212);
+}
+
+body::-webkit-scrollbar-thumb:hover {
+	border: 3px solid;
+	border-color: rgb(43, 43, 43);
+} body.light_mode::-webkit-scrollbar-thumb:hover {
+	border-color: rgb(212, 212, 212);
+}
+
+content {
+	padding: 0 0 4rem 0; /* match bottom to footer height */
+}
+
+footer {
+	position: absolute;
+	width: 100%;
+	height: 4rem; /* space from bottom */
+	bottom: 0;
+}
+
+a {
+	color: rgb(113, 142, 183);
+	text-decoration: none;
+}
+
+a:hover {
+	color: rgb(113, 142, 183);
+	text-decoration: underline;
+}
+
+a:visited {
+	color: rgb(169, 110, 110);
+}
+
+th {
+	width: 33%;
+}
+
+.invert {
+	filter: invert(1) hue-rotate(180deg);
+}
+
+.anti_invert {
+	filter: invert(1) hue-rotate(180deg);
+}
+
+.boxed {
+	border: 1px solid;
+	border-color: rgb(200, 200, 200);
+}
+
+.consolas {
+	font-family: "Consolas", sans-serif;
+}
+
+.dropdown-toggle {
+	color: rgb(113, 142, 183);
+}
+
+.dropdown-toggle:focus {
+	color: rgb(248, 249, 250);
+	box-shadow: none;
+}
+
+.font_size_10 {
+	font-size: 10px;
+}
+
+.pipe {
+	color: rgb(200, 200, 200);
+}
+
+#dropright_menu {
+	min-width: 10rem;
+}
+
+#dropdown_menu {
+	left: 50%;
+	right: auto;
+	transform: translate(-50%, 0);
+	border-bottom: 15px solid;
+	border-color: rgb(43, 43, 43);
+	width: 180px;
+} #dropdown_menu.light_mode {
+	border-color: rgb(212, 212, 212);
+}
+
+#big_box {
+	border: 2px solid;
+	border-color: rgb(200, 200, 200);
+}
+
+#terminal {
+	height: 120px;
+	width: auto;
+	background: rgb(80, 80, 80);
+	padding: 10px;
+	overflow-y: scroll;
+	font-family: "Consolas", sans-serif;
+}
+
+#terminal::-webkit-scrollbar {
+	width: 12px;
+}
+
+#terminal::-webkit-scrollbar-track {
+	background: rgb(80, 80, 80);
+	border-radius: 5px;
+}
+
+#terminal::-webkit-scrollbar-thumb {
+	background: rgb(43, 43, 43);
+	border: 3px solid;
+	border-color: rgb(80, 80, 80);
+	border-radius: 12px;
+}
+
+#terminal::-webkit-scrollbar-thumb:hover {
+	border: 2px solid;
+	border-color: rgb(80, 80, 80);
+}
+
+#blinking_caret {
+	animation: 1s blink step-end infinite;
+} @keyframes blink {
+	0% {color: transparent;}
+	50% {color: inherit;}
+}
+
+#bottom_gh {
+	font-size: 60px;
+	color: rgb(60, 60, 60);
+}
+
+#bottom_gh:hover {
+	color: rgb(120, 120, 120);
+}
+
+#light_mode_btn {
+	width: 24px;
+	height: 24px;
+	border: 2px solid;
+	border-color: rgb(150, 150, 150);
+	padding: 1px 0 0 0;
+	box-shadow: none;
+	margin: 0 0 0 2px;
+}
+
+#light_mode_btn:active {
+	background: transparent;
+}
+
+#light_mode_icon {
+	font-size: 18px;
+	color: rgb(43, 43, 43);
+}
+
+#light_mode_icon:active {
+	color: rgb(150, 150, 150);
+}
