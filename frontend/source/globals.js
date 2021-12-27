@@ -8,7 +8,7 @@ const app_name = "portals";
 const readonly = {
 	app_name: app_name,
 	repo: `https://github.com/j9108c/${app_name}`,
-	description: "apps",
+	description: "apps portal",
 	backend: (run_config == "dev" ? "/backend" : ""),
 	socket: socket_io_client.io((run_config == "dev" ? `http://${(env.browser ? location.hostname : "localhost")}:1101` : ""))
 };
