@@ -59,7 +59,7 @@ io.on("connect", (socket) => {
 			io.to(socket.id).emit("update domain request info", cloudflare.domain_request_info);
 		});
 
-		socket.on("navigation", async (route) => {
+		socket.on("navigation", (route) => {
 			switch (route) {
 				case "index":
 					break;
