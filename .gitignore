@@ -5,5 +5,4 @@
 frontend/build/
 
 # keep
-!.git
-!.gitignore
+!.git*
