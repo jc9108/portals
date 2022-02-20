@@ -1,10 +1,10 @@
 {
-	"author": "j9108c",
+	"author": "jc9108",
 	"name": "portals",
-	"repository": "github:j9108c/portals",
+	"repository": "github:jc9108/portals",
 	"license": "MIT",
 	"scripts": {
-		"dev": "concurrently --names \"backend,frontend\" --prefix \"{name}:\" --prefix-colors \"#f2caff,#61f2f2\" \"cd ./backend/ && npm run dev\" \"wait-on tcp:1101 && cd ./frontend/ && npm run dev\"",
+		"dev": "concurrently --names \"backend,frontend\" --prefix \"{name}:\" --prefix-colors \"#f2caff,#61f2f2\" \"cd ./backend/ && npm run dev\" \"wait-on tcp:1026 && cd ./frontend/ && npm run dev\"",
 		"build": "cd ./frontend/ && npm run build",
 		"prod_start": "cd ./backend/ && npm run prod_start",
 		"prod_stop": "cd ./backend/ && npm run prod_stop",
@@ -12,6 +12,6 @@
 	},
 	"devDependencies": {
 		"concurrently": "^6.5.1",
-		"wait-on": "^6.0.0"
+		"wait-on": "^6.0.1"
 	}
 }

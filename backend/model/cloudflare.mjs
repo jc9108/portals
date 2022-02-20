@@ -1,5 +1,5 @@
 const backend = process.cwd();
-const run_config = (backend.toLowerCase().slice(0, 20) == "/mnt/c/users/j9108c/" ? "dev" : "prod");
+const run_config = (backend.toLowerCase().startsWith("/mnt/c/") ? "dev" : "prod");
 
 const secrets = (run_config == "dev" ? (await import(`${backend}/.secrets.mjs`)).dev : (await import(`${backend}/.secrets.mjs`)).prod);
 
@@ -57,7 +57,7 @@ async function get_requests_by_country(range) {
 	const response_data = response.data;
 	// console.log(response_data);
 
-	if (response_data.data.viewer.zones[0][`httpRequests1${group}Groups`].length == 0) { // no requests
+	if (!response_data.data || response_data.data.viewer.zones[0][`httpRequests1${group}Groups`].length == 0) { // no requests
 		return [];
 	} else {
 		return response_data.data.viewer.zones[0][`httpRequests1${group}Groups`][0].sum.countryMap.sort((a, b) => b.requests - a.requests); // sort by number of requests, descending

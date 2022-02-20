@@ -19,10 +19,10 @@
 <div class="mt-4">
 	<div id="big_box" class="mt-5 px-3">
 		<ul class="mt-3">
-			{#if $globals_w.other_apps_urls}
-				{#each Object.keys($globals_w.other_apps_urls).sort() as app_name, idx}
+			{#if $globals_w.all_apps_urls}
+				{#each Object.keys($globals_w.all_apps_urls).sort() as app_name, idx}
 					{#if app_name != "portals"}
-						<li><a href={$globals_w.other_apps_urls[app_name].link}>{app_name}</a> (<a href={$globals_w.other_apps_urls[app_name].repo} target="_blank"><i class="fab fa-github"></i></a>)</li>
+						<li><a href={$globals_w.all_apps_urls[app_name].link}>{app_name}</a> (<a href={$globals_w.all_apps_urls[app_name].repo} target="_blank"><i class="fab fa-github"></i></a>)</li>
 					{/if}
 				{:else}
 					<li>?</li>
