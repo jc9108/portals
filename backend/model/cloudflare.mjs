@@ -10,12 +10,18 @@ function get_dates(range) {
 	let from = null;
 	let to = null;
 
-	if (range == "last24hours") {
-		from = new Date(now.setDate(now.getDate() - 1)).toISOString();
-	} else if (range == "last7days") {
-		from = new Date(now.setDate(now.getDate() - 7)).toISOString().slice(0, 10);
-	} else if (range == "last30days") {
-		from = new Date(now.setDate(now.getDate() - 30)).toISOString().slice(0, 10);
+	switch (range) {
+		case "last24hours":
+			from = new Date(now.setDate(now.getDate() - 1)).toISOString();
+			break;
+		case "last7days":
+			from = new Date(now.setDate(now.getDate() - 7)).toISOString().slice(0, 10);
+			break;
+		case "last30days":
+			from = new Date(now.setDate(now.getDate() - 30)).toISOString().slice(0, 10);
+			break;
+		default:
+			break;
 	}
 	now = new Date();
 	to = (range == "last24hours" ? now.toISOString() : now.toISOString().slice(0, 10));
