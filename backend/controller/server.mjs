@@ -29,10 +29,6 @@ const all_apps_urls = {
 		link: (run_config == "dev" ? "http://localhost:1025" : `https://portals.sh`),
 		repo: "https://github.com/jc9108/portals"
 	},
-	// "portfolio": {
-	// 	link: (run_config == "dev" ? "http://localhost:1100" : `https://jc.portals.sh`),
-	// 	repo: "https://github.com/jc9108/portfolio"
-	// },
 	"dark-mode-pdf": {
 		link: (run_config == "dev" ? "http://localhost:1200" : `https://dark-mode-pdf.portals.sh`),
 		repo: "https://github.com/jc9108/dark-mode-pdf"
@@ -40,6 +36,14 @@ const all_apps_urls = {
 	"eternity": {
 		link: (run_config == "dev" ? "http://localhost:1300" : `https://eternity.portals.sh`),
 		repo: "https://github.com/jc9108/eternity"
+	},
+	"scripts": {
+		link: "https://github.com/jc9108/scripts",
+		repo: "https://github.com/jc9108/scripts"
+	},
+	"ttv-favorites": {
+		link: "https://chrome.google.com/webstore/detail/ttv-favorites/ehbgkeiljpignaickbblnbfkhfeemmme",
+		repo: "https://github.com/jc9108/ttv-favorites"
 	}
 };
 

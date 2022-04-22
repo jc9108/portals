@@ -7,20 +7,16 @@
 </script>
 <script>
 	let [
-		countdown_wrapper,
 		last24hours_total_wrapper,
 		last7days_total_wrapper,
 		last30days_total_wrapper,
 		last24hours_tbody_wrapper,
 		last7days_tbody_wrapper,
-		last30days_tbody_wrapper
-	] = [null];
+		last30days_tbody_wrapper,
+		countdown_wrapper
+	] = [];
 	svelte.onMount(() => {		
 		globals_r.socket.emit("navigation", "stats");
-
-		globals_r.socket.on("update countdown", (countdown) => {
-			countdown_wrapper.innerHTML = countdown;
-		});
 
 		globals_r.socket.on("update domain request info", (domain_request_info) => {
 			if (!domain_request_info || Object.keys(domain_request_info).length == 0) {
@@ -39,10 +35,14 @@
 			fill_stats_table(domain_request_info.last7days_total, domain_request_info.last7days_countries, last7days_tbody_wrapper);
 			fill_stats_table(domain_request_info.last30days_total, domain_request_info.last30days_countries, last30days_tbody_wrapper);
 		});
+
+		globals_r.socket.on("update countdown", (countdown) => {
+			countdown_wrapper.innerHTML = countdown;
+		});
 	});
 	svelte.onDestroy(() => {
-		globals_r.socket.off("update countdown");
 		globals_r.socket.off("update domain request info");
+		globals_r.socket.off("update countdown");
 	});
 
 	function fill_stats_table(total_requests, countries, parent_tbody) {
