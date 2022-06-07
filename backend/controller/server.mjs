@@ -37,13 +37,13 @@ const all_apps_urls = {
 		link: (run_config == "dev" ? "http://localhost:1300" : `https://eternity.portals.sh`),
 		repo: "https://github.com/jc9108/eternity"
 	},
-	"scripts": {
-		link: "https://github.com/jc9108/scripts",
-		repo: "https://github.com/jc9108/scripts"
-	},
 	"ttv-favorites": {
 		link: "https://chrome.google.com/webstore/detail/ttv-favorites/ehbgkeiljpignaickbblnbfkhfeemmme",
 		repo: "https://github.com/jc9108/ttv-favorites"
+	},
+	"yt-favorites": {
+		link: "https://chrome.google.com/webstore/detail/yt-favorites/ifcphlpmanooadagnlmafmhgjklffkih",
+		repo: "https://github.com/jc9108/yt-favorites"
 	}
 };
 
